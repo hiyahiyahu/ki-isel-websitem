@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hira Nur Kırtekin</title>
+
+<!-- ICON KÜTÜPHANESİ (GERÇEK İKONLAR) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(120deg, #e0eafc, #cfdef3);
+        margin: 0;
+        text-align: center;
+    }
+
+    h1, h2 {
+        color: #333;
+    }
+
+    .box {
+        background: white;
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 30px;
+        background-color: #4a90e2;
+        color: white;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #357abd;
+    }
+
+    .section {
+        display: none;
+    }
+
+    /* HAKKIMDA */
+    .about {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex-wrap: nowrap;
+        text-align: left;
+       
+    }
+
+    .about img {
+        width: 180px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid #ddd;
+    }
+
+    /* GALERİ */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid #ddd;
+        transition: 0.3s;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    /* İLETİŞİM */
+    .contact {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 20px;
+        font-size: 36px;
+    }
+
+    .contact a {
+        color: #333;
+        transition: 0.3s;
+    }
+
+    .contact a:hover {
+        transform: scale(1.2);
+    }
+
+    footer {
+        margin: 40px 0 20px;
+        color: #777;
+        font-size: 14px;
+    }
+</style>
+
+<script>
+    function showOnly(sectionId) {
+        const sections = document.querySelectorAll(".section");
+        sections.forEach(s => s.style.display = "none");
+        document.getElementById(sectionId).style.display = "block";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+</script>
+</head>
+
+<body>
+
+<!-- ANASAYFA -->
+<div class="box section" id="home" style="display:block;">
+    <h1>Siteye Hoşgeldiniz!</h1>
+    <p>
+        Bilgisayar mühendisliğine giriş dersi için hazırladığım
+        kişisel web siteme hoş geldiniz.
+        <br><br>
+        Eğer hakkımda daha fazla bilgi sahibi olmak istiyorsanız
+        aşağıdaki butona tıklayabilirsiniz.
+    </p>
+
+    <div class="btn" onclick="showOnly('about')">
+        Hakkımda
+    </div>
+</div>
+
+<!-- HAKKIMDA -->
+<div class="box section" id="about">
+    <h2>Hakkımda</h2>
+
+    <div class="about">
+        <!-- VESİKALIK FOTO -->
+        <img src="/resim/hira.jpg.jpeg" >
+
+        <p>
+            Merhaba ben <strong>Hira</strong>, 17 yaşındayım.
+            İstanbul Medeniyet Üniversitesi Bilgisayar Mühendisliği
+            1. sınıf öğrencisiyim.
+            Mehmet Niyazi Altuğ Anadolu Lisesi mezunuyum.
+            İstanbul’da yaşıyorum ve Bağcılar’da oturuyorum.
+            <br><br>
+            Hobilerim müzik dinlemek, kitap okumak ve modayla
+            ilgilenmek. Teknolojiye ve yazılıma ilgi duyuyorum
+            ve bu alanda kendimi geliştirmeyi hedefliyorum.
+            <br><br>
+            İstanbul Medeniyet
+            Üniversitesindeki MASK kulübünün sosyal medya komisyonu başkanıyım.
+        </p>
+    </div>
+
+    <div class="btn" onclick="showOnly('gallery')">
+        Fotoğraf Albümümü Gör
+    </div>
+</div>
+
+<!-- GALERİ -->
+<div class="box section" id="gallery">
+    <h2>Fotoğraf Albümüm</h2>
+
+    <div class="gallery">
+        <img src="/resim/hia.jpeg" alt="Fotoğraf 1">
+        <img src="/resim/hiia.jpeg" alt="Fotoğraf 2">
+        <img src="/resim/hiraa.jpeg" alt="Fotoğraf 3">
+        <img src="/resim/hiraaa.jpeg" alt="Fotoğraf 4">
+        <img src="/resim/hiraaaa.jpeg" alt="Fotoğraf 5">
+    </div>
+
+    <div class="btn" onclick="showOnly('contact')">
+        İletişim Bilgilerim
+    </div>
+</div>
+
+<!-- İLETİŞİM -->
+<div class="box section" id="contact">
+    <h2>İletişim</h2>
+
+    <div class="contact">
+        <!-- INSTAGRAM -->
+        <a href="https://instagram.com/hirakrtknn" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- MAIL -->
+        <a href="mailto:hirakirtekinn@gmail.com" title="Mail">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/905511379147" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+</div>
+
+<footer>
+  
+</footer>
+
+</body>
+</html>
